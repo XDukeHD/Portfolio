@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Izzys from "../../public/img/Izzys1.png";
+import Izzys from "../../public/img/izzys1.png";
 import Cookiemc from "../../public/img/cookiemc.png";
 import Eraanimes from "../../public/img/eraanimes.png";
 

@@ -1,5 +1,28 @@
 {
-  "private": true,
+  "private": false,
+  "name": "portfolio",
+  "version": "1.0",
+  "description": "My portfolio",
+  "author": "XDuke (Tulio Zanella)",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/XDukeHD/Portfolio"
+  },
+  "keywords": [
+    "portfolio",
+    "nextjs",
+    "reactjs",
+    "typescript",
+    "chakra-ui",
+    "bootstrap"
+  ],
+  "bugs": {
+    "url": "https://xduke.tech/bio"
+  },
+  "homepage": "https://xduke.tech",
+
   "scripts": {
     "dev": "next",
     "build": "next build",

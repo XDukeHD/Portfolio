@@ -9,6 +9,7 @@ import { About } from "../components/home/about";
 import Head from "next/head";
 import Bear from "../public/img/chocolatebear.png";
 
+
 export default function Index() {
   return (
     <div>
@@ -45,12 +46,15 @@ export default function Index() {
           content="duke, xduke, xdukehd, xduke_br, tulio, tulio_zanella, tuliozanella, tuliozanella.com, tul, mr duke, mrduke, mrdukehd, mrduke_br,"
         />
         <meta name="description" content="Contact me for buy applications." />
+        <script src="../styles/bootstrap.min.js"/>
       </Head>
       <Navbar />
       <Home />
       <Projects />
       <About />
       <Footer />
+      <script src="../styles/bootstrap.min.js"/>
     </div>
+    
   );
 }

@@ -10,7 +10,7 @@ import {
 
 export function Home() {
     return (
-    <section id="Header" className="text-center text-white masthead bg-black"> 
+    <section id="page-top" className="text-center text-white masthead bg-black"> 
         <br/>
         <br/>  
         <br/>
@@ -31,19 +31,7 @@ export function Home() {
           Back-end Developer - Discord bot Developer - Cloud Engineer
         </small>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+
       </div>
     </section>
     );

@@ -2,4 +2,4 @@
  My personal portfolio
 
 
- <a href="https://portfolio-3i2fl804f-xdukehd.vercel.app/" target="_blank" rel="noopener noreferrer">Self-Host on Vercel</a>
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/XDukeHD/Portfolio)

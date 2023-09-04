@@ -42,10 +42,10 @@ export function Projects() {
       <div className="container">
         <div className="projects-card project-one ">
           <div className="project-info-container ">
-            <h2 className="project-title ">Izzy's</h2>
+            <h2 className="project-title ">ThreeCloud</h2>
             <span className="project-load-bar"></span>
             <p className="project-short-desc">
-              Izzy's is a Discord bot that has several features, but at the moment it is deactivated.
+              ThreeCloud is a platform that allows you to upload your projects and bots to host them for free, but at the same time is in development, so it is not yet available for use.
             </p>
             <button className="project-btn">
               <a href="#portfolio">See More</a>

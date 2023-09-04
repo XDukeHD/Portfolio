@@ -14112,7 +14112,7 @@ a.plans.active .category-description {
 	height: 30em;
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
 	padding: 1em;
-	background-image: url(https://github.com/XDukeHD/Portfolio/blob/test/src/public/img/izzys1.png?raw=true);
+	background-image: url("/three.png");
 	background-position: center center;
 	background-size: cover;
 	transition: 1s;
@@ -14135,7 +14135,7 @@ a.plans.active .category-description {
 	color: var(--purple);
 	font-weight: 800;
 	text-transform: uppercase;
-	margin: -0em 0 0 0;
+	margin: -1em 5 0 0;
 	transition: .3s;
 }
 

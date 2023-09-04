@@ -23,7 +23,7 @@
   },
   "homepage": "https://xduke.tech",
   "scripts": {
-    "dev": "next -p 80",
+    "dev": "next -p 2220",
     "build": "next build",
     "start": "next start"
   },

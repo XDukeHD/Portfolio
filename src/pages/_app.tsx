@@ -4,6 +4,7 @@ import '../styles/normalize.css'
 import '../styles/meus.css'
 import '../styles/bio.css'
 import '../public/fonts/font-awesome.min.css'
+import '../styles/global.css'
 import 'jquery';
 import type { AppProps } from 'next/app'
 import { useEffect } from 'react';

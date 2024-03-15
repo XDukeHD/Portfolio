@@ -51,11 +51,14 @@ export function Footer() {
       <br />
       <div className="text-center text-white">
           <small className=" text-center" style={{ fontSize: "1.3rem", color: "#fff" }}>
-            © 2023 XDuke. All rights reserved.
+          All rights reserved. © 2023 - 2024 XD Development.
           </small>
         </div>
         <div className="container">
-          <small>This site is made with Next.js, React, Bootstrap and TypeScript.</small>
+          <small>This site is made with Next.js, React, Bootstrap, TailwindCSS and TypeScript.</small>
+        </div>
+        <div className="container">
+          <small>This website is free for personal use and self-hosting. When using it personally or self-hosting it, please follow the guidelines of the MIT license.</small>
         </div>
     </footer>
   );

@@ -26,22 +26,22 @@ export function HomeBio() {
                 </a>
               </li>
               <li id="github">
-                <a href="/github" target="_blank">
+                <a href="https://github.com/xdukehd?utm_source=xduke.dev" target="_blank">
                   <FaGithub style={{ scale: "2.5" }} /> <p>......</p>Github
                 </a>
               </li>
               <li id="codepen">
-                <a href="/codepen" target="_blank">
+                <a href="https://codepen.io/xdukehd" target="_blank">
                   <FaCodepen style={{ scale: "2.5" }} /> <p>......</p>Codepen
                 </a>
               </li>
               <li id="instagram">
-                <a href="/instagram" target="_blank">
+                <a href="https://www.instagram.com/tulio_zanella?utm_source=xduke.dev" target="_blank">
                   <FaInstagram style={{ scale: "1.9" }} /> <p>..</p>Instagram
                 </a>
               </li>
               <li id="portfolio">
-                <a href="/home" target="_blank">
+                <a href="/" target="_blank">
                   <FaCode style={{ scale: "2" }} /> <p>...</p>Portfólio
                 </a>
               </li>

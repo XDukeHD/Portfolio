@@ -22,7 +22,7 @@ export function About() {
           </div>
           <div className="col-lg-4 me-auto">
             <p className="lead">
-              If you require the services of a Discord bot or any other application, please feel free to contact me through Discord at XDuke#0001. I'll be more than happy to assist you!
+              If you require the services of a Discord bot or any other application, please feel free to contact me through Discord at xduke_br. I'll be more than happy to assist you!
             </p>
           </div>
         </div>

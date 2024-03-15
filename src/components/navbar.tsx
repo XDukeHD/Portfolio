@@ -3,56 +3,37 @@ import Image from "next/image";
 
 export function Navbar() {
   return (
-    <nav
-      className="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase"
-      id="mainNav"
-      style={{ background: "linear-gradient(white 0%, black 0%)" }}
-    >
-      <div className="container">
-        <a className="navbar-brand" href="#page-top">
+    <nav className="bg-black from-white to-black text-white">
+      <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+        <a className="text-xl font-bold" href="#page-top">
           xDuke
         </a>
         <button
-          className="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
+          className="lg:hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
           aria-controls="navbarResponsive"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i className="fa fa-bars"></i>
+          <svg
+            className="w-6 h-6 text-white fill-current"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path fillRule="evenodd" clipRule="evenodd" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+          </svg>
         </button>
-        <div className="collapse navbar-collapse" id="navbarResponsive">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item mx-0 mx-lg-1">
-              <a
-                className="nav-link py-3 px-0 px-lg-3 rounded"
-                href="#portfolio"
-                style={{ borderColor: "var(--bs-indigo)" }}
-              >
-                Portfolio
-              </a>
+        <div className="hidden lg:flex items-center space-x-6" id="navbarResponsive">
+          <ul className="flex space-x-6">
+            <li className="text-lg font-semibold">
+              <a href="#portfolio">Projects</a>
             </li>
-            <li className="nav-item mx-0 mx-lg-1">
-              <a
-                className="nav-link py-3 px-0 px-lg-3 rounded"
-                href="#about"
-                style={{ paddingLeft: "14px" }}
-              >
-                About
-              </a>
+            <li className="text-lg font-semibold">
+              <a href="#about">About</a>
             </li>
-            <li className="nav-item mx-0 mx-lg-1">
-              <a
-                className="nav-link py-3 px-0 px-lg-3 rounded"
-                href="/bio"
-                style={{ paddingLeft: "14px" }}
-              >
-                Links
-              </a>
+            <li className="text-lg font-semibold">
+              <a href="/bio">Links</a>
             </li>
-            <li className="nav-item mx-0 mx-lg-1"></li>
           </ul>
         </div>
       </div>

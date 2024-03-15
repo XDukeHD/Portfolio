@@ -14112,7 +14112,20 @@ a.plans.active .category-description {
 	height: 30em;
 	box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
 	padding: 1em;
-	background-image: url("/three.png");
+	background-image: url("/izzys.png");
+	background-position: center center;
+	background-size: cover;
+	transition: 1s;
+	overflow-y: hidden;
+}
+
+.projects-card-izzys {
+	position: relative;
+	width: 25em;
+	height: 30em;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+	padding: 1em;
+	background-image: url("/izzys.png");
 	background-position: center center;
 	background-size: cover;
 	transition: 1s;
@@ -14132,7 +14145,7 @@ a.plans.active .category-description {
 
 .project-title {
 	font-size: var(--font-size-project-title);
-	color: var(--purple);
+	color: var(--violet);
 	font-weight: 800;
 	text-transform: uppercase;
 	margin: -1em 5 0 0;

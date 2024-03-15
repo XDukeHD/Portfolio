@@ -8,6 +8,7 @@ interface Project {
   modalImage: string;
   modalTitle: string;
   modalDescription: string;
+  modalLink: string;
 }
 
 const projects: Project[] = [
@@ -19,6 +20,7 @@ const projects: Project[] = [
     modalImage: '/izzys-prev.png', // Caminho da imagem no modal
     modalTitle: 'Izzys',
     modalDescription: 'Discover with Izzys™! Custom commands, quick giveaways, detailed logs, and simple configurations. Simplify and enhance your experience today!',
+    modalLink: 'https://izzysbot.xyz',
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const projects: Project[] = [
     modalImage: '/zbio-prev.png', // Caminho da imagem no modal
     modalTitle: 'Z-bio',
     modalDescription: 'Make yourself stand out, meet new people and bring new faces to your team. Start introducing yourself to the world.',
+    modalLink: 'https://z-bio.fun',
   },
   
 ];
@@ -42,6 +45,7 @@ export function Projects() {
     modalImage: '',
     modalTitle: '',
     modalDescription: '',
+    modalLink: '',
   });
 
   const openModal = (project: Project) => {
@@ -118,8 +122,8 @@ export function Projects() {
             <h2 className="text-lg font-medium mb-2">{modalContent.modalTitle}</h2>
             <p className="text-violet break-all">{modalContent.modalDescription}</p>
             <br></br>
-            <a href="#" className="block text-center bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700">
-              Link do site
+            <a href={modalContent.modalLink} className="block text-center bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700">
+              Link to Project
             </a>
           </div>
         </div>

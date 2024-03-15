@@ -1,6 +1,16 @@
 import { useState } from 'react';
 
-const projects = [
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  modalImage: string;
+  modalTitle: string;
+  modalDescription: string;
+}
+
+const projects: Project[] = [
   {
     id: 1,
     title: 'Izzys',
@@ -23,14 +33,18 @@ const projects = [
 ];
 
 export function Projects() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState({
-    image: '',
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [modalContent, setModalContent] = useState<Project>({
+    id: 0,
     title: '',
     description: '',
+    image: '',
+    modalImage: '',
+    modalTitle: '',
+    modalDescription: '',
   });
 
-  const openModal = (project) => {
+  const openModal = (project: Project) => {
     setModalContent(project);
     setIsModalOpen(true);
   };
@@ -114,19 +128,3 @@ export function Projects() {
     </section>
   );
 }
-
-    {/*
-    <section
-      id="portfolio"
-      className="portfolio"
-      style={{ background: "#000", color: "var(--bs-indigo)" }}
-    >
-      <h2
-        className="text-uppercase text-center"
-        style={{ font: "normal normal bold 3rem/2rem Borel", color: "#fff" }}
-      >
-        Projects
-      </h2>
-      <hr className="star-dark mb-5" />
-  */}
-      

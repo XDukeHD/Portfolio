@@ -1,0 +1,99 @@
+{
+  "navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "home": {
+    "intro": "Quer me conhecer um pouco melhor?"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "realName": "Túlio Zanella",
+    "nickname": "XDuke",
+    "age": "17 anos",
+    "subtitle": "Entusiasta em Desenvolvimento de Software e Análise de Dados",
+    "description": "Sou um desenvolvedor web autodidata, apaixonado por tecnologia. Aprendi a programar explorando conteúdos online, construindo projetos próprios e resolvendo problemas do dia a dia. Atualmente, me dedico a aprimorar minhas habilidades em desenvolvimento web, com foco em tecnologias como Node.js, Express, PHP e MySQL.",
+    "viewCertificates": "Ver Certificados"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologias com as quais trabalho e Linguas que falo",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "database": "Banco de Dados",
+    "other": "Outras Tecnologias",
+    "languages": "Línguas",
+    "portugueseBR": "Português (BR)",
+    "english": "Inglês",
+    "spanish": "Espanhol"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Confira alguns dos projetos que desenvolvi utilizando as tecnologias mais recentes",
+    "viewDetails": "Ver Detalhes",
+    "linkToProject": "Ver Projeto",
+    "close": "Fechar"
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Vamos trabalhar juntos",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Falha ao enviar mensagem. Por favor, tente novamente.",
+    "contactInfo": "Informações de Contato",
+    "phone": "Telefone",
+    "location": "Localização",
+    "subject": "Assunto",
+    "yourName": "Seu nome",
+    "yourEmail": "seu@email.com",
+    "subjectPlaceholder": "Assunto da mensagem",
+    "messagePlaceholder": "Sua mensagem..."
+  },
+  "footer": {
+    "quickLinks": "Links Rápidos",
+    "contactMe": "Contate-me",
+    "followMe": "Siga-me",
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Feito com",
+    "in": "no",
+    "brazil": "Brasil"
+  },
+  "language": {
+    "english": "Inglês",
+    "portuguese": "Português",
+    "spanish": "Espanhol"
+  },
+  "certificates": {
+    "title": "Certificados",
+    "subtitle": "Veja meus certificados de cursos e treinamentos",
+    "viewDetails": "Ver Detalhes",
+    "close": "Fechar",
+    "certi": {
+      "1": {
+        "name": "Lógica de Programação",
+        "description": "Curso básico de lógica de programação, abordando conceitos fundamentais para iniciantes.",
+        "hours": "Horas",
+        "finished": "Finalizado em"
+      },
+      "2": {
+        "name": "Administração de Data Center",
+        "description": "Curso de administração de data center, focado em infraestrutura e gestão de servidores.",
+        "hours": "Horas",
+        "finished": "Finalizado em"
+      },
+      "3": {
+        "name": "Hardware e Redes Windows",
+        "description": "Curso de hardware e redes com foco em sistemas operacionais Windows, abordando instalação, configuração e manutenção.",
+        "hours": "Horas",
+        "finished": "Finalizado em"
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "intro": "Want to get to know me a little better?"
+  },
+  "about": {
+    "title": "About Me",
+    "realName": "Túlio Zanella",
+    "nickname": "XDuke",
+    "age": "17 years old",
+    "subtitle": "Software Development and Data Analysis Enthusiast",
+    "description": "I'm a self-taught web developer focused on back-end technologies like Node.js, Express, PHP, and MySQL. I learned everything hands-on, studying on my own and building projects that solve real-world problems.",
+    "viewCertificates": "View Certificates"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I work with and languages I speak",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "database": "Database",
+    "other": "Other Technologies",
+    "languages": "Languages",
+    "portugueseBR": "Portuguese (BR)",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Check out some of the projects I've developed using the latest technologies",
+    "viewDetails": "View Details",
+    "linkToProject": "Link to Project",
+    "close": "Close"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's work together",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "contactInfo": "Contact Information",
+    "phone": "Phone",
+    "location": "Location",
+    "subject": "Subject",
+    "yourName": "Your name",
+    "yourEmail": "your@email.com",
+    "subjectPlaceholder": "Message subject",
+    "messagePlaceholder": "Your message..."
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "contactMe": "Contact Me",
+    "followMe": "Follow Me",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "in": "in",
+    "brazil": "Brazil"
+  },
+  "language": {
+    "english": "English",
+    "portuguese": "Portuguese",
+    "spanish": "Spanish"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "subtitle": "Check out my certificates from various courses and training programs",
+    "viewDetails": "View Details",
+    "close": "Close",
+    "certi": {
+      "1": {
+        "name": "Logic Programming",
+        "description": "Basic course in logic programming, covering fundamental concepts for beginners.",
+        "hours": "hours",
+        "finished": "Finished in"
+      },
+      "2": {
+        "name": "Data Center Administration",
+        "description": "Course on data center administration, focusing on infrastructure and server management.",
+        "hours": "hours",
+        "finished": "Finished in"
+      },
+      "3": {
+        "name": "Hardware and Windows Networks",
+        "description": "Course on hardware and networks with a focus on Windows operating systems, covering installation, configuration, and maintenance.",
+        "hours": "hours",
+        "finished": "Finished in"
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "intro": "¿Quieres conocerme un poco mejor?"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "realName": "Túlio Zanella",
+    "nickname": "XDuke",
+    "age": "17 años",
+    "subtitle": "Entusiasta del Desarrollo de Software y Análisis de Datos",
+    "description": "Soy un desarrollador web autodidacta, enfocado en tecnologías de back-end como Node.js, Express, PHP y MySQL. Aprendí todo de forma práctica, estudiando por mi cuenta y creando proyectos que resuelven problemas del mundo real.",
+    "viewCertificates": "Ver Certificados"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Tecnologías con las que trabajo y lenguas que hablo",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "database": "Base de Datos",
+    "other": "Otras Tecnologías",
+    "languages": "Idiomas",
+    "portugueseBR": "Portugués (BR)",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Mira algunos de los proyectos que he desarrollado utilizando las tecnologías más recientes",
+    "viewDetails": "Ver Detalles",
+    "linkToProject": "Ver Proyecto",
+    "close": "Cerrar"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Trabajemos juntos",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo.",
+    "contactInfo": "Información de Contacto",
+    "phone": "Teléfono",
+    "location": "Ubicación",
+    "subject": "Asunto",
+    "yourName": "Tu nombre",
+    "yourEmail": "tu@correo.com",
+    "subjectPlaceholder": "Asunto del mensaje",
+    "messagePlaceholder": "Tu mensaje..."
+  },
+  "footer": {
+    "quickLinks": "Enlaces Rápidos",
+    "contactMe": "Contáctame",
+    "followMe": "Sígueme",
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "in": "en",
+    "brazil": "Brasil"
+  },
+  "language": {
+    "english": "Inglés",
+    "portuguese": "Portugués",
+    "spanish": "Español"
+  },
+  "certificates": {
+    "title": "Certificados",
+    "subtitle": "Estos son algunos de los cursos que he completado",
+    "viewDetails": "Ver Detalles",
+    "close": "Cerrar",
+    "certi": {
+      "1": {
+        "name": "Lógica de Programación",
+        "description": "Curso básico de lógica de programación, abordando conceptos fundamentales para principiantes.",
+        "hours": "Horas",
+        "finished": "Finalizado en"
+      },
+      "2": {
+        "name": "Administración de Data Center",
+        "description": "Curso de administración de data center, enfocado en infraestructura y gestión de servidores.",
+        "hours": "Horas",
+        "finished": "Finalizado en"
+      },
+      "3": {
+        "name": "Hardware y Redes Windows",
+        "description": "Curso de hardware y redes con enfoque en sistemas operativos Windows, abordando instalación, configuración y mantenimiento.",
+        "hours": "Horas",
+        "finished": "Finalizado en"
+      }
+    }
+  }
+}

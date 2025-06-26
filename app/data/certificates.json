@@ -1,0 +1,34 @@
+{
+  "certificates": [
+    {
+      "id": 1,
+      "name": "Lógica de Programação",
+      "description": "Curso básico de lógica de programação, abordando conceitos fundamentais para iniciantes.",
+      "institution": "Senac - Registro-SP",
+      "hours": 40,
+      "year": 2024,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Senac_logo.svg",
+      "certificate": "/images/certificates/logic_programming.png"
+    },
+    {
+      "id": 2,
+      "name": "Administração de Data Center",
+      "description": "Curso de administração de data center, focado em infraestrutura e gestão de servidores.",
+      "institution": "Senac - Registro-SP",
+      "hours": 32,
+      "year": 2025,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/8/86/Senac_logo.svg",
+      "certificate": "/images/certificates/data_center_administration.png"
+    },
+    {
+      "id": 3,
+      "name": "Hardware e Redes Windows",
+      "description": "Curso de hardware e redes com foco em sistemas operacionais Windows, abordando instalação, configuração e manutenção.",
+      "institution": "Compuway - Registro-SP",
+      "hours": 62,
+      "year": 2019,
+      "image": "/images/compuway.jpg",
+      "certificate": "/images/certificates/hardware_networks_windows.jpeg"
+    }
+  ]
+}

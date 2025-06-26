@@ -1,0 +1,42 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "API de Pagamentos PIX",
+      "description": "Uma api de pagamentos idependente de conexões externas com banco, utilizando Node.js e Express.",
+      "shortDescription": "Independent payment API",
+      "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+      "technologies": ["Node.js", "Express"],
+      "projectLink": "https://github.com/XDukeHD/nubank-api-pix",
+      "gallery": [
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "FireHosting v1",
+      "description": "Site para a Hospedagem FireHosting, desenvolvido com PHP e MySQL.",
+      "shortDescription": "Web hosting site",
+      "image": "/images/projects/firehosting/v1/fire-home.png",
+      "projectLink": "https://firehosting.com.br",
+      "technologies": ["PHP", "MySQL"],
+      "gallery": [
+        "/images/projects/firehosting/v1/fire-home.png",
+        "/images/projects/firehosting/v1/fire-plans.png"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Izzys Bot",
+      "description": "A Izzys foi um bot de Discord desenvolvido com Node.js e Discord.js, que oferece uma variedade de comandos úteis para servidores, porém foi desativado por falta de dinheiro para hospedagem.",
+      "shortDescription": "Discord bot with useful commands",
+      "image": "/images/projects/izzys/izzys-site.png",
+      "projectLink": "https://izzysbot.xyz",
+      "technologies": ["Node.js", "Express", "MySQL"],
+      "gallery": [
+        "/images/projects/izzys/izzys-site.png",
+        "/images/projects/izzys/izzys.png"
+      ]
+    }
+  ]
+}

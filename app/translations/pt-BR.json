@@ -3,6 +3,7 @@
     "home": "Início",
     "about": "Sobre",
     "skills": "Habilidades",
+    "services": "Serviços",
     "projects": "Projetos",
     "contact": "Contato"
   },
@@ -69,6 +70,22 @@
     "english": "Inglês",
     "portuguese": "Português",
     "spanish": "Espanhol"
+  },
+  "services": {
+    "title": "Meus Serviços",
+    "subtitle": "Soluções profissionais para suas necessidades digitais",
+    "website": {
+      "title": "Desenvolvimento de Sites",
+      "description": "Desde simples landing pages até sites complexos com design moderno. Desenvolvidos com as mais recentes tecnologias para garantir desempenho e experiência do usuário."
+    },
+    "bots": {
+      "title": "Bots Personalizados",
+      "description": "Bots para WhatsApp, Discord ou Telegram. Desenvolvidos de acordo com suas necessidades específicas para automatizar tarefas e melhorar a comunicação."
+    },
+    "systems": {
+      "title": "Sistemas Internos & APIs",
+      "description": "Desenvolvimento de sistemas internos e APIs adaptados às necessidades do seu negócio. Soluções personalizadas para otimizar processos e aumentar a produtividade."
+    }
   },
   "certificates": {
     "title": "Certificados",

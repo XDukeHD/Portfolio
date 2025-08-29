@@ -15,10 +15,10 @@
     {
       "id": 2,
       "name": "FireHosting v1",
-      "description": "Site para a Hospedagem FireHosting, desenvolvido com PHP e MySQL.",
+      "description": "Site Simples para a Hospedagem FireHosting, desenvolvido com PHP e MySQL.",
       "shortDescription": "Web hosting site",
       "image": "/images/projects/firehosting/v1/fire-home.png",
-      "projectLink": "https://firehosting.com.br",
+      "projectLink": "https://github.com/XDukeHD/firehosting-v1",
       "technologies": ["PHP", "MySQL"],
       "gallery": [
         "/images/projects/firehosting/v1/fire-home.png",
@@ -27,6 +27,19 @@
     },
     {
       "id": 3,
+      "name": "FireHosting v2",
+      "description": "Site para a Hospedagem FireHosting, site completo, com dashboard exclusiva para gerenciamento de serviços.",
+      "shortDescription": "Web hosting site with Node.js",
+      "image": "/images/projects/firehostingv2/home.png",
+      "projectLink": "https://firehosting.com.br",
+      "technologies": ["Node.js", "Next.js", "MySQL", "Tailwind CSS", "Prisma", "PHP", "Express"],
+      "gallery": [
+        "/images/projects/firehostingv2/plans.png",
+        "/images/projects/firehostingv2/dashboard.png"
+      ]
+    },
+    {
+      "id": 4,
       "name": "Izzys Bot",
       "description": "A Izzys foi um bot de Discord desenvolvido com Node.js e Discord.js, que oferece uma variedade de comandos úteis para servidores, porém foi desativado por falta de dinheiro para hospedagem.",
       "shortDescription": "Discord bot with useful commands",

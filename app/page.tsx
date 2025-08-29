@@ -8,6 +8,7 @@ import AboutMe from "./components/AboutMe";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
+import Services from "./components/Services";
 import SmoothScroll from "./components/SmoothScroll";
 import AnimatedBackground from "./components/AnimatedBackground";
 import { motion, AnimatePresence } from "framer-motion";
@@ -107,6 +108,10 @@ export default function Home() {
             
             <section id="skills">
               <Skills />
+            </section>
+            
+            <section id="services">
+              <Services />
             </section>
             
             <section id="projects">

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Github, Instagram, MessageCircle, Linkedin, ExternalLink, Mail, Heart } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
+import { SiWakatime } from "react-icons/si";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 import Image from "next/image";
@@ -86,8 +87,8 @@ export default function Footer() {
             <a href="mailto:tulio.czanella@gmail.com" className="text-gray-400 hover:text-white transition-all hover:translate-x-1 duration-200 flex items-center gap-2 mb-4">
               <Mail size={16} /> tulio.czanella@gmail.com
             </a>
-            <a href="tel:+5513996029622" className="text-gray-400 hover:text-white transition-all hover:translate-x-1 duration-200 flex items-center gap-2">
-              <FaWhatsapp size={16} /> +55 13 99602-9622
+            <a href="https://wa.me/5513981914625" className="text-gray-400 hover:text-white transition-all hover:translate-x-1 duration-200 flex items-center gap-2">
+              <FaWhatsapp size={16} /> +55 13 98191-4625
             </a>
             <p className="text-gray-400 mb-4">{translations?.footer?.followMe || "Follow me on social media"}</p>
             
@@ -112,6 +113,16 @@ export default function Footer() {
                 className="bg-gradient-to-br from-purple-600 to-blue-600 p-2 rounded-full text-white shadow-lg shadow-purple-500/20"
               >
                 <Github size={18} />
+              </motion.a>
+              <motion.a
+                href="https://wakatime.com/@XDuke"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.15, y: -5 }}
+                transition={{ duration: 0.2 }}
+                className="bg-gradient-to-br from-purple-600 to-blue-600 p-2 rounded-full text-white shadow-lg shadow-purple-500/20"
+              >
+                <SiWakatime size={18} />
               </motion.a>
               <motion.a
                 href="https://discordapp.com/users/816775306115285073"

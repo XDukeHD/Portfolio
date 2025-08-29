@@ -28,8 +28,58 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
+    const webhookUrl = "https://discordapp.com/api/webhooks/1410840686948909168/aOrOPUkiZD0jR57EuqV-NXPu7QGZOYMgofRa0WsU5dxHSKf-VMAjAmtxJF1cUjt2aM89";
+
+    const FIELD_NAME_LIMIT = 256;
+    const FIELD_VALUE_LIMIT = 1024;
+    const TITLE_LIMIT = 256;
+    const MESSAGE_LIMIT = 4096;
+
+    function truncate(str: string, n: number) {
+      return str.length > n ? str.slice(0, n - 1) + "…" : str;
+    }
+
+    const fitsInEmbed =
+      (formData.name.length <= FIELD_VALUE_LIMIT) &&
+      (formData.email.length <= FIELD_VALUE_LIMIT) &&
+      (formData.subject.length <= FIELD_VALUE_LIMIT) &&
+      (formData.message.length <= MESSAGE_LIMIT);
+
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      let response;
+      if (fitsInEmbed) {
+        const embed = {
+          title: truncate("Novo contato recebido!", TITLE_LIMIT),
+          color: 5814783,
+          fields: [
+            { name: "Nome", value: truncate(formData.name || "-", FIELD_VALUE_LIMIT), inline: true },
+            { name: "Email", value: truncate(formData.email || "-", FIELD_VALUE_LIMIT), inline: true },
+            { name: "Assunto", value: truncate(formData.subject || "-", FIELD_VALUE_LIMIT), inline: false },
+            { name: "Mensagem", value: truncate(formData.message || "-", MESSAGE_LIMIT), inline: false },
+          ],
+          timestamp: new Date().toISOString(),
+        };
+        response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ embeds: [embed] }),
+        });
+      } else {
+        const content =
+          `Novo contato recebido!\n` +
+          `Nome: ${truncate(formData.name, FIELD_VALUE_LIMIT)}\n` +
+          `Email: ${truncate(formData.email, FIELD_VALUE_LIMIT)}\n` +
+          `Assunto: ${truncate(formData.subject, FIELD_VALUE_LIMIT)}\n` +
+          `Mensagem:\n${truncate(formData.message, 4500)}`;
+        response = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ content }),
+        });
+      }
+
+      if (!response.ok) throw new Error("Erro ao enviar para o Discord");
+
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
@@ -99,8 +149,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-gray-400">{translations?.contact?.phone || "Phone"}</h4>
-                    <a href="tel:+5513996029622" className="text-white hover:text-purple-400 transition-colors">
-                      +55 13 99602-9622
+                    <a href="https://wa.me/5513981914625" className="text-white hover:text-purple-400 transition-colors">
+                      +55 13 98191-4625
                     </a>
                   </div>
                 </motion.div>
@@ -195,6 +245,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
+                  maxLength={4500}
                   className="w-full bg-gray-800/80 border border-gray-700 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                   placeholder={translations?.contact?.messagePlaceholder || "Your message..."}
                 />

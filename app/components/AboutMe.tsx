@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, Instagram, MessageCircle } from "lucide-react";
+import { SiWakatime } from "react-icons/si";
 import { FaDiscord } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
@@ -140,6 +141,15 @@ export default function AboutMe() {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Github className="w-8 h-8" />
+              </motion.a>
+              <motion.a
+                href="https://wakatime.com/@XDuke"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.2 }}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <SiWakatime className="w-8 h-8" />
               </motion.a>
               <motion.a
                 href="https://discordapp.com/users/816775306115285073"

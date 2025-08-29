@@ -21,6 +21,7 @@ export default function Navbar() {
     { key: "home", href: "#home" },
     { key: "about", href: "#about" },
     { key: "skills", href: "#skills" },
+    { key: "services", href: "#services" },
     { key: "projects", href: "#projects" },
     { key: "contact", href: "#contact" },
   ];

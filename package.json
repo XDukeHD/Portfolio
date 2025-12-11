@@ -16,7 +16,7 @@
   "version": "2.0.0",
   "private": false,
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=22.18.0"
   },
   "scripts": {
     "dev": "next dev",
@@ -68,7 +68,7 @@
     "framer-motion": "^11.0.8",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.446.0",
-    "next": "^15.3.4",
+    "next": "^16.0.8",
     "next-themes": "^0.3.0",
     "postcss": "8.4.30",
     "react": "18.2.0",

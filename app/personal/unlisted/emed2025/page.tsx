@@ -4,29 +4,109 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Snowflake, Heart, Star, Gift, Calendar, GraduationCap, ChevronLeft, ChevronRight } from "lucide-react";
+import { Snowflake, Heart, Star, Gift, Calendar, GraduationCap, ChevronLeft, ChevronRight, TreePine, Sparkles } from "lucide-react";
 
-const Snowfall = () => {
+const ChristmasBackground = () => {
+  const [elements, setElements] = useState<{
+    snow: { left: string; duration: number; delay: number; size: number }[];
+    lights: { left: string; top: string; color: string; size: string; duration: number; delay: number }[];
+    decor: { left: string; top: string; type: number; size: number; duration: number }[];
+  }>({ snow: [], lights: [], decor: [] });
+
+  useEffect(() => {
+    setElements({
+      snow: [...Array(50)].map(() => ({
+        left: `${Math.random() * 100}%`,
+        duration: Math.random() * 10 + 10,
+        delay: Math.random() * 10,
+        size: Math.random() * 15 + 5
+      })),
+      lights: [...Array(20)].map((_, i) => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        color: ['bg-red-500', 'bg-green-500', 'bg-yellow-400', 'bg-blue-400'][i % 4],
+        size: Math.random() * 6 + 2 + 'px',
+        duration: Math.random() * 2 + 1,
+        delay: Math.random() * 2
+      })),
+      decor: [...Array(8)].map(() => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        type: Math.floor(Math.random() * 3),
+        size: Math.random() * 50 + 50,
+        duration: 10 + Math.random() * 10
+      }))
+    });
+  }, []);
+
+  if (elements.snow.length === 0) return null;
+
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {[...Array(30)].map((_, i) => (
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,0,0,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_100%,rgba(0,255,0,0.05),transparent_40%)]" />
+      
+      {elements.snow.map((item, i) => (
         <motion.div
-          key={i}
-          initial={{ y: -10, x: Math.random() * 100 + "%", opacity: 0 }}
+          key={`snow-${i}`}
+          style={{ left: item.left, top: -20 }}
           animate={{
-            y: "110vh",
-            x: `calc(${Math.random() * 100}% + ${Math.random() * 20 - 10}px)`,
-            opacity: [0, 1, 0],
+            top: "110vh",
+            opacity: [0, 0.8, 0],
           }}
           transition={{
-            duration: Math.random() * 5 + 5,
+            duration: item.duration,
             repeat: Infinity,
-            delay: Math.random() * 5,
+            delay: item.delay,
             ease: "linear",
           }}
-          className="absolute text-white/30"
+          className="absolute text-white/40"
         >
-          <Snowflake size={Math.random() * 10 + 10} />
+          <Snowflake size={item.size} />
+        </motion.div>
+      ))}
+
+      {elements.lights.map((item, i) => (
+        <motion.div
+          key={`light-${i}`}
+          className={`absolute rounded-full blur-sm ${item.color}`}
+          style={{
+            left: item.left,
+            top: item.top,
+            width: item.size,
+            height: item.size,
+          }}
+          animate={{
+            opacity: [0.2, 0.8, 0.2],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: item.duration,
+            repeat: Infinity,
+            delay: item.delay,
+          }}
+        />
+      ))}
+
+      {elements.decor.map((item, i) => (
+        <motion.div
+          key={`decor-${i}`}
+          className="absolute text-white/5"
+          style={{
+            left: item.left,
+            top: item.top,
+          }}
+          animate={{
+            y: [0, -20, 0],
+            rotate: [0, 10, -10, 0],
+          }}
+          transition={{
+            duration: item.duration,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          {item.type === 0 ? <TreePine size={item.size} /> : item.type === 1 ? <Gift size={item.size} /> : <Star size={item.size} />}
         </motion.div>
       ))}
     </div>
@@ -221,7 +301,7 @@ export default function Emed2025Page() {
   if (!started) {
     return (
       <div className="min-h-screen bg-red-950 flex flex-col items-center justify-center relative overflow-hidden text-white p-4">
-        <Snowfall />
+        <ChristmasBackground />
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -254,7 +334,7 @@ export default function Emed2025Page() {
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
     >
-      <Snowfall />
+      <ChristmasBackground />
       
       <div className="absolute top-0 left-0 right-0 z-50 p-4 flex gap-2 pt-8 md:pt-4">
         {slides.map((s, i) => (

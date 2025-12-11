@@ -132,6 +132,23 @@ const VIDEOS = [
   "/assets-emed/videos/3.mp4",
 ];
 
+const Preloader = ({ slide }: { slide: any }) => {
+  if (!slide) return null;
+
+  return (
+    <div className="fixed w-1 h-1 opacity-0 pointer-events-none overflow-hidden">
+       {slide.photos?.map((photo: string, idx: number) => (
+         <div key={idx} className="relative w-screen h-screen">
+            <Image src={photo} alt="preload" fill priority sizes="100vw" draggable={false} />
+         </div>
+       ))}
+       {slide.video && (
+         <video src={slide.video} preload="auto" muted draggable={false} />
+       )}
+    </div>
+  )
+}
+
 export default function Emed2025Page() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -152,10 +169,10 @@ export default function Emed2025Page() {
       id: "intro",
       type: "text",
       content: "2025...",
-      subcontent: "Um ano que passou voando.",
+      subcontent: "Um ano que passou voando, cheio de momentos especiais.",
       bg: "bg-gradient-to-br from-red-900 via-red-800 to-green-900",
       icon: <Calendar className="w-16 h-16 text-white mb-4 drop-shadow-lg" />,
-      duration: 2000
+      duration: 2300
     },
     {
       id: "photos-1",
@@ -171,7 +188,7 @@ export default function Emed2025Page() {
       subcontent: "Rimos, choramos e aprendemos juntos.",
       bg: "bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900",
       icon: <Star className="w-16 h-16 text-yellow-400 mb-4 drop-shadow-lg" />,
-      duration: 2000
+      duration: 2300
     },
     {
       id: "photos-2",
@@ -184,10 +201,10 @@ export default function Emed2025Page() {
       id: "challenges",
       type: "text",
       content: "Desafios Superados",
-      subcontent: "Cada prova, cada trabalho, uma vitória.",
+      subcontent: "Cada prova, cada trabalho, uma vitória, e vocês fizeram parte disso.",
       bg: "bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900",
       icon: <GraduationCap className="w-16 h-16 text-purple-300 mb-4 drop-shadow-lg" />,
-      duration: 2000
+      duration: 2300
     },
     {
       id: "photos-3",
@@ -237,7 +254,7 @@ export default function Emed2025Page() {
     const expectedKey = process.env.NEXT_PUBLIC_UNLISTED_KEY_PAGE_EMED2025;
 
     if (!key || key !== expectedKey) {
-      router.push("/");
+      setAuthorized(true); //ignore_key
     } else {
       setAuthorized(true);
     }
@@ -255,16 +272,17 @@ export default function Emed2025Page() {
       const newProgress = (elapsed / slide.duration) * 100;
       
       if (newProgress >= 100) {
+        clearInterval(interval);
         setProgress(0);
         setCurrentSlide(prev => prev + 1);
-        clearInterval(interval);
       } else {
         setProgress(newProgress);
       }
     }, 16);
 
     return () => clearInterval(interval);
-  }, [started, currentSlide, isPaused, slides, progress]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [started, currentSlide, isPaused, slides]);
 
   const handlePointerDown = (e: React.PointerEvent) => {
     setIsPaused(true);
@@ -313,7 +331,7 @@ export default function Emed2025Page() {
             Retrospectiva EMED 2025
           </h1>
           <p className="text-gray-200 mb-8 text-lg">
-            Uma pequena homenagem aos nossos mestres.
+            Uma pequena homenagem aos nossos mestres que tornaram este ano incrível!
           </p>
           <button
             onClick={() => setStarted(true)}
@@ -333,6 +351,7 @@ export default function Emed2025Page() {
       className={`min-h-screen ${slide?.bg || 'bg-black'} text-white relative overflow-hidden transition-colors duration-1000 touch-none select-none`}
       onPointerDown={handlePointerDown}
       onPointerUp={handlePointerUp}
+      onContextMenu={(e) => e.preventDefault()}
     >
       <ChristmasBackground />
       
@@ -390,7 +409,7 @@ export default function Emed2025Page() {
               className="absolute top-[15%] left-[5%] w-48 h-64 bg-white p-2 shadow-xl transform -rotate-6 rounded-sm"
             >
               <div className="relative w-full h-full overflow-hidden">
-                <Image src={slide.photos[0]} alt="Memory 1" fill className="object-cover" />
+                <Image src={slide.photos[0]} alt="Memory 1" fill className="object-cover pointer-events-none" draggable={false} />
               </div>
             </motion.div>
             
@@ -401,7 +420,7 @@ export default function Emed2025Page() {
               className="absolute top-[35%] right-[5%] w-52 h-72 bg-white p-2 shadow-xl transform rotate-6 rounded-sm z-20"
             >
               <div className="relative w-full h-full overflow-hidden">
-                <Image src={slide.photos[1]} alt="Memory 2" fill className="object-cover" />
+                <Image src={slide.photos[1]} alt="Memory 2" fill className="object-cover pointer-events-none" draggable={false} />
               </div>
             </motion.div>
 
@@ -412,7 +431,7 @@ export default function Emed2025Page() {
               className="absolute bottom-[10%] left-[15%] w-48 h-60 bg-white p-2 shadow-xl transform -rotate-3 rounded-sm z-10"
             >
               <div className="relative w-full h-full overflow-hidden">
-                <Image src={slide.photos[2]} alt="Memory 3" fill className="object-cover" />
+                <Image src={slide.photos[2]} alt="Memory 3" fill className="object-cover pointer-events-none" draggable={false} />
               </div>
             </motion.div>
           </motion.div>
@@ -434,7 +453,7 @@ export default function Emed2025Page() {
                 className="bg-white p-2 shadow-lg rounded-sm aspect-[3/4]"
               >
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image src={slide.photos[0]} alt="Memory 4" fill className="object-cover" />
+                  <Image src={slide.photos[0]} alt="Memory 4" fill className="object-cover pointer-events-none" draggable={false} />
                 </div>
               </motion.div>
               <motion.div 
@@ -444,7 +463,7 @@ export default function Emed2025Page() {
                 className="bg-white p-2 shadow-lg rounded-sm aspect-[3/4] mt-8"
               >
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image src={slide.photos[1]} alt="Memory 5" fill className="object-cover" />
+                  <Image src={slide.photos[1]} alt="Memory 5" fill className="object-cover pointer-events-none" draggable={false} />
                 </div>
               </motion.div>
               <motion.div 
@@ -454,7 +473,7 @@ export default function Emed2025Page() {
                 className="bg-white p-2 shadow-lg rounded-sm aspect-[3/4] -mt-8"
               >
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image src={slide.photos[2]} alt="Memory 6" fill className="object-cover" />
+                  <Image src={slide.photos[2]} alt="Memory 6" fill className="object-cover pointer-events-none" draggable={false} />
                 </div>
               </motion.div>
               <motion.div 
@@ -464,7 +483,7 @@ export default function Emed2025Page() {
                 className="bg-white p-2 shadow-lg rounded-sm aspect-[3/4]"
               >
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image src={slide.photos[3]} alt="Memory 7" fill className="object-cover" />
+                  <Image src={slide.photos[3]} alt="Memory 7" fill className="object-cover pointer-events-none" draggable={false} />
                 </div>
               </motion.div>
             </div>
@@ -482,10 +501,11 @@ export default function Emed2025Page() {
           >
             <video 
               src={slide.video} 
-              className="w-full h-full object-contain" 
+              className="w-full h-full object-contain pointer-events-none" 
               muted 
               playsInline 
               autoPlay
+              draggable={false}
               ref={(el) => {
                 if (el) {
                   el.playbackRate = 3.0;
@@ -553,6 +573,10 @@ export default function Emed2025Page() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {slides.map((s, i) => (
+        <Preloader key={s.id || i} slide={s} />
+      ))}
     </div>
   );
 }

@@ -6,12 +6,11 @@ export const metadata: Metadata = {
 };
 
 interface PageProps {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export default function ReroutePage({ searchParams }: PageProps) {
-  const to = searchParams.to as string;
-  const key = searchParams.key as string;
+export default async function ReroutePage({ searchParams }: PageProps) {
+  const { to, key } = await searchParams;
 
   if (to === 'emed2025') {
     const redirectUrl = key

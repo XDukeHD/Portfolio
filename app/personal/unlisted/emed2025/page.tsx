@@ -75,7 +75,7 @@ export default function Emed2025Page() {
       subcontent: "Um ano que passou voando.",
       bg: "bg-gradient-to-br from-red-900 via-red-800 to-green-900",
       icon: <Calendar className="w-16 h-16 text-white mb-4 drop-shadow-lg" />,
-      duration: 1500
+      duration: 2000
     },
     {
       id: "photos-1",
@@ -91,7 +91,7 @@ export default function Emed2025Page() {
       subcontent: "Rimos, choramos e aprendemos juntos.",
       bg: "bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900",
       icon: <Star className="w-16 h-16 text-yellow-400 mb-4 drop-shadow-lg" />,
-      duration: 1500
+      duration: 2000
     },
     {
       id: "photos-2",
@@ -107,7 +107,7 @@ export default function Emed2025Page() {
       subcontent: "Cada prova, cada trabalho, uma vitória.",
       bg: "bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-900",
       icon: <GraduationCap className="w-16 h-16 text-purple-300 mb-4 drop-shadow-lg" />,
-      duration: 1500
+      duration: 2000
     },
     {
       id: "photos-3",
@@ -140,9 +140,9 @@ export default function Emed2025Page() {
     {
       id: "transition",
       type: "transition",
-      content: "E tem mais uma coisa...",
+      content: "E tem mais uma coisa que gostaríamos de dizer...",
       bg: "bg-black",
-      duration: 1500
+      duration: 2300
     },
     {
       id: "letter",
